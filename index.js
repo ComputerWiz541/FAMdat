@@ -24,6 +24,12 @@ const songs = [
         displayName: 'Times 2',
         cover: 'assets/2.jpg',
         style: 'country',
+    },
+    {
+        path: 'assets/3.mp3',
+        displayName: 'Echoes of Goodbye',
+        cover: 'assets/3.jpg',
+        style: 'pop rhythmic melancholic',
     }
 ];
 
