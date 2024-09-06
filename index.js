@@ -18,6 +18,12 @@ const songs = [
         displayName: 'Neon Goodbye',
         cover: 'assets/1.jpg',
         style: 'dancepop electronic futuristic',
+    },
+    {
+        path: 'assets/2.mp3',
+        displayName: 'Times 2',
+        cover: 'assets/2.jpg',
+        style: 'country',
     }
 ];
 
