@@ -36,6 +36,12 @@ const songs = [
         displayName: 'Dancing in the Light',
         cover: 'assets/4.jpg',
         style: 'gospel anthemic uplifting',
+    },
+    {
+        path: 'assets/5.mp3',
+        displayName: 'The Melodic Blaze',
+        cover: 'assets/5.jpg',
+        style: 'opera mellow orchestral',
     }
 ];
 
