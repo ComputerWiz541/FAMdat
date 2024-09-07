@@ -30,6 +30,12 @@ const songs = [
         displayName: 'Always There for Me',
         cover: 'assets/3.jpg',
         style: 'electronic dream pop ethereal',
+    },
+    {
+        path: 'assets/4.mp3',
+        displayName: 'Hold, Please',
+        cover: 'assets/4.jpg',
+        style: 'corporate',
     }
 ];
 
