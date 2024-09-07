@@ -42,6 +42,24 @@ const songs = [
         displayName: 'The Melodic Blaze',
         cover: 'assets/5.jpg',
         style: 'opera mellow orchestral',
+    },
+    {
+        path: 'assets/6.mp3',
+        displayName: 'Dance Till Dawn',
+        cover: 'assets/6.jpg',
+        style: 'electronic edm',
+    },
+    {
+        path: 'assets/7.mp3',
+        displayName: 'Trapped in the Factory',
+        cover: 'assets/7.jpg',
+        style: 'anthemic j-pop',
+    },
+    {
+        path: 'assets/8.mp3',
+        displayName: 'Digital Heartache',
+        cover: 'assets/8.jpg',
+        style: 'futuristic traditional electronic',
     }
 ];
 
