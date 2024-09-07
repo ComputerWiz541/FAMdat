@@ -45,6 +45,26 @@
     </div>
 
     <script src="index.js"></script>
+    <script>
+        (function() {
+      var devtoolsOpen = false;
+      var threshold = 160;
+      
+      setInterval(function() {
+        if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+          devtoolsOpen = true;
+        } else {
+          devtoolsOpen = false;
+        }
+
+        if (devtoolsOpen) {
+          document.body.innerHTML = '';
+          window.close();
+          window.location = 'about:blank';
+        }
+      }, 500);
+    })();
+    </script>
 </body>
 
 </html>
