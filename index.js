@@ -30,10 +30,17 @@ const songs = [
         displayName: 'Echoes of Goodbye',
         cover: 'assets/3.jpg',
         style: 'pop rhythmic melancholic',
+    },
+    {
+        path: 'assets/4.mp3',
+        displayName: 'Dancing in the Light',
+        cover: 'assets/4.jpg',
+        style: 'gospel anthemic uplifting',
     }
 ];
 
-let musicIndex = 0;
+//let musicIndex = 0;
+let musicIndex = Math.floor(Math.random() * songs.length);
 let isPlaying = false;
 
 function togglePlay() {
@@ -100,3 +107,21 @@ music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
 
 loadMusic(songs[musicIndex]);
+
+const musicAd = document.getElementById('music-ad');
+const closeAdBtn = document.getElementById('close-ad');
+
+closeAdBtn.addEventListener('click', () => {
+    musicAd.style.display = 'none';
+});
+
+const downloadIcon = document.getElementById('download');
+
+downloadIcon.addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = songs[musicIndex].path;
+    link.setAttribute('download', songs[musicIndex].displayName + '.mp3');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
