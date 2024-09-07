@@ -36,6 +36,18 @@ const songs = [
         displayName: 'Hold, Please',
         cover: 'assets/4.jpg',
         style: 'corporate',
+    },
+    {
+        path: 'assets/5.mp3',
+        displayName: 'Cozy Rain',
+        cover: 'assets/5.jpg',
+        style: 'salsa experimental rhythmic',
+    },
+    {
+        path: 'assets/6.mp3',
+        displayName: 'Cuando No Estás',
+        cover: 'assets/6.jpg',
+        style: 'atmospheric smooth electronic',
     }
 ];
 
