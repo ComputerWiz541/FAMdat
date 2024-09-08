@@ -30,6 +30,18 @@
                 <i id="play" class="fa-solid fa-play play-button"></i>
                 <i id="next" class="fa-solid fa-forward"></i>
             </div>
+            <div class="music-ad" id="music-ad">
+                <span>Looking for new music? <a href="./index.html">GO!</a></span>
+                <i class="fa-solid fa-xmark close-ad" id="close-ad"></i>
+            </div>
+            <script>
+                const musicAd = document.getElementById('music-ad');
+                const closeAdBtn = document.getElementById('close-ad');
+
+                closeAdBtn.addEventListener('click', () => {
+                    musicAd.style.display = 'none';
+                });
+            </script>
         </div>
     </div>
 
