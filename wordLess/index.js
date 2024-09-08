@@ -48,6 +48,24 @@ const songs = [
         displayName: 'Cuando No Estás',
         cover: 'assets/6.jpg',
         style: 'atmospheric smooth electronic',
+    },
+    {
+        path: 'assets/7.mp3',
+        displayName: 'Can't Wait to See You',
+        cover: 'assets/6.jpg',
+        style: 'fast-paced aggressive punk',
+    },
+    {
+        path: 'assets/8.mp3',
+        displayName: 'Shred the Night',
+        cover: 'assets/6.jpg',
+        style: 'indie syncopated electric',
+    },
+    {
+        path: 'assets/9.mp3',
+        displayName: 'Faded Memories',
+        cover: 'assets/6.jpg',
+        style: 'nostalgic rhythmic experimental afrobeat',
     }
 ];
 
