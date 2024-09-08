@@ -24,52 +24,9 @@ const songs = [
         displayName: 'Spirit of War',
         cover: 'assets/2.jpg',
         style: 'urgent orchestral dark',
-    },
-    {
-        path: 'assets/3.mp3',
-        displayName: 'Always There for Me',
-        cover: 'assets/3.jpg',
-        style: 'electronic dream pop ethereal',
-    },
-    {
-        path: 'assets/4.mp3',
-        displayName: 'Hold, Please',
-        cover: 'assets/4.jpg',
-        style: 'corporate',
-    },
-    {
-        path: 'assets/5.mp3',
-        displayName: 'Cozy Rain',
-        cover: 'assets/5.jpg',
-        style: 'salsa experimental rhythmic',
-    },
-    {
-        path: 'assets/6.mp3',
-        displayName: 'Cuando No Estás',
-        cover: 'assets/6.jpg',
-        style: 'atmospheric smooth electronic',
-    },
-    {
-        path: 'assets/7.mp3',
-        displayName: 'Can't Wait to See You',
-        cover: 'assets/7.jpg',
-        style: 'fast-paced aggressive punk',
-    },
-    {
-        path: 'assets/8.mp3',
-        displayName: 'Shred the Night',
-        cover: 'assets/8.jpg',
-        style: 'indie syncopated electric',
-    },
-    {
-        path: 'assets/9.mp3',
-        displayName: 'Faded Memories',
-        cover: 'assets/9.jpg',
-        style: 'nostalgic rhythmic experimental afrobeat',
     }
 ];
 
-//let musicIndex = 0;
 let musicIndex = Math.floor(Math.random() * songs.length);
 let isPlaying = false;
 
