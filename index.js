@@ -63,7 +63,6 @@ const songs = [
     }
 ];
 
-//let musicIndex = 0;
 let musicIndex = Math.floor(Math.random() * songs.length);
 let isPlaying = false;
 
@@ -148,4 +147,27 @@ downloadIcon.addEventListener('click', () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+});
+
+// fav songs
+const saveBtn = document.getElementById('save');
+let savedSongs = JSON.parse(localStorage.getItem('savedSongs')) || [];
+
+saveBtn.addEventListener('click', () => {
+    const currentSong = songs[musicIndex];
+    if (!savedSongs.some(song => song.displayName === currentSong.displayName)) {
+        savedSongs.push(currentSong);
+        localStorage.setItem('savedSongs', JSON.stringify(savedSongs));
+        alert(`${currentSong.displayName} has been saved to your favorites!`);
+    } else {
+        alert(`${currentSong.displayName} is already in your favorites.`);
+    }
+});
+
+
+const savedAd = document.getElementById('saved-ad');
+const closeAd2Btn = document.getElementById('close-ad2');
+
+closeAd2Btn.addEventListener('click', () => {
+    savedAd.style.display = 'none';
 });
