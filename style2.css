@@ -159,3 +159,30 @@ h1 {
 
 
 
+
+
+.music-ad {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto 0;
+    width: 90%;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+}
+
+.music-ad a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.music-ad a:hover {
+    text-decoration: underline;
+}
