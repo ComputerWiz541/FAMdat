@@ -60,6 +60,18 @@ const songs = [
         displayName: 'Digital Heartache',
         cover: 'assets/8.jpg',
         style: 'futuristic traditional electronic',
+    },
+    {
+        path: 'assets/9.mp3',
+        displayName: 'Burning Strings',
+        cover: 'assets/9.jpg',
+        style: 'groovy soulful reggae',
+    },
+    {
+        path: 'assets/10.mp3',
+        displayName: 'By Your Side',
+        cover: 'assets/10.jpg',
+        style: 'plaintive soulful acoustic',
     }
 ];
 
