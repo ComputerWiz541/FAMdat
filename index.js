@@ -183,3 +183,32 @@ const closeAd2Btn = document.getElementById('close-ad2');
 closeAd2Btn.addEventListener('click', () => {
     savedAd.style.display = 'none';
 });
+
+
+
+
+// Loads the list of songs
+
+function displaySongsList() {
+    const songsListContainer = document.getElementById('songs-list');
+    songs.forEach((song, index) => {
+        const songElement = document.createElement('div');
+        songElement.classList.add('song-list');
+        songElement.setAttribute('data-index', index);
+        songElement.innerHTML = `
+            <img src="${song.cover}" alt="${song.displayName}" class="song-cover">
+            <div class="song-info">
+                <h2>${song.displayName}</h2>
+                <p>${song.style}</p>
+            </div>
+        `;
+        songsListContainer.appendChild(songElement);
+
+        //To load each song to load and play it
+        songElement.addEventListener('click', () => {
+            musicIndex = index;
+            loadMusic(songs[musicIndex]);
+            playMusic();
+        });
+    });
+}
