@@ -4,6 +4,17 @@ html{
     box-sizing: border-box;
 }
 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 body{
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
@@ -37,13 +48,15 @@ body{
     transform: scale(1.1);
 }
 
-.container{
+.container {
     background-color: #e7e7e7;
-    height: 500px;
+    height: 600px; /* Remove fixed height */
+    max-height: 600px; /* Set a maximum height */
     width: 400px;
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.5s ease;
+    flex-grow: 1; /* Allows the container to grow and push the footer down */
 }
 
 .container:hover{
@@ -307,4 +320,260 @@ h1 {
 audio {
     width: 100%;
     margin-top: 20px;
+}
+
+
+
+
+
+footer {
+    background-color: #e7e7e7;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+    footer {
+        width: 100px;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        padding-top: 200px;
+        background-color: #e7e7e7;
+    }
+
+    .footer-controls {
+        flex-direction: column;
+        justify-content: flex-start; 
+        gap: 30px;
+        
+        align-items: center;
+    }
+
+    .footer span {
+        font-size: 16px;
+    }
+
+
+.footer span {
+    font-size: 12px;
+    color: #333;
+}
+
+
+.fa-solid-footer{
+    font-size: 30px;
+    color: #666;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.fa-solid-footer:hover{
+    filter: brightness(40%);
+}
+
+.footer-controls {
+    display: flex;
+    justify-content: center; 
+    gap: 50px; 
+}
+
+
+
+
+
+
+
+
+
+
+/* Flexbox container for the two containers */
+.container-wrapper {
+    display: flex;
+    gap: 20px; /* Space between the two containers */
+    justify-content: center; /* Center the containers */
+    align-items: flex-start; /* Align containers at the top */
+    margin-left: 100px;
+    margin-top: 130px;
+    
+}
+
+/* Existing container styles */
+.container2 {
+    background-color: #e7e7e7;
+    height: 600px; 
+    /*max-height: 500px;   maximum height */
+    width: 800px; 
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.container2:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/*
+.container2 {
+    background-color: #e7e7e7;
+    height: 600px;
+    width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    flex-grow: 1;
+    overflow: hidden;
+}
+*/
+
+
+
+
+.songs-list {
+    height: 100%; /* Take full height of container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.song-list {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-bottom: 10px; /* Add space between songs */
+}
+
+.song-list:hover {
+    transform: translateY(-5px);
+}
+
+/* Style the scrollbar for WebKit browsers */
+.songs-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.songs-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.songs-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.songs-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bigger, smaller */
+
+.container-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 100px;
+    margin-top: 130px;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .container-wrapper {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container-wrapper {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container-wrapper {
+        transform: scale(0.7);
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-wrapper {
+        transform: scale(0.6);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container-wrapper {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .container-wrapper {
+        transform: scale(1.2);
+    }
+}
+
+.container, .container2 {
+    flex-shrink: 0;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* responsive 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #e7e7e7;
+    text-align: center;
+}
+*/
+@media screen and (max-width: 800px) {
+    footer {
+        position: static;
+        margin-top: 20px;
+    }
 }
