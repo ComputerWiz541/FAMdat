@@ -146,9 +146,9 @@ loadMusic(songs[musicIndex]);
 const musicAd = document.getElementById('music-ad');
 const closeAdBtn = document.getElementById('close-ad');
 
-closeAdBtn.addEventListener('click', () => {
-    musicAd.style.display = 'none';
-});
+//closeAdBtn.addEventListener('click', () => {
+//    musicAd.style.display = 'none';
+//});
 
 const downloadIcon = document.getElementById('download');
 
