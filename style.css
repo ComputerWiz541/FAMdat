@@ -577,3 +577,11 @@ footer {
         margin-top: 20px;
     }
 }
+
+.container {
+    height: 550px; /* Reduced height */
+}
+
+.container2 {
+    height: 550px; /* Reduced height */
+}
