@@ -36,11 +36,49 @@
         </div>
 
         <div class="container2">
+            <input type="text" id="search-bar" placeholder="Search for a song or style..." />
             <div id="songs-list" class="songs-list">
                 <hr>
-              
             </div>
-        </div>
+        </div>        
+        <script>
+            // Search
+            document.getElementById('search-bar').addEventListener('input', function(e) {
+                const searchValue = e.target.value.toLowerCase();
+                const filteredSongs = songs.filter(song => 
+                    song.displayName.toLowerCase().includes(searchValue) ||
+                    song.style.toLowerCase().includes(searchValue)
+                );
+                
+                displayFilteredSongs(filteredSongs);
+            });
+
+            function displayFilteredSongs(filteredSongs) {
+                const songsListContainer = document.getElementById('songs-list');
+                songsListContainer.innerHTML = '';  
+
+                filteredSongs.forEach((song, index) => {
+                    const songElement = document.createElement('div');
+                    songElement.classList.add('song-list');
+                    songElement.setAttribute('data-index', index);
+                    songElement.innerHTML = `
+                        <img src="${song.cover}" alt="${song.displayName}" class="song-cover">
+                        <div class="song-info">
+                            <h2>${song.displayName}</h2>
+                            <p>${song.style}</p>
+                        </div>
+                    `;
+                    songsListContainer.appendChild(songElement);
+
+                    songElement.addEventListener('click', () => {
+                        musicIndex = songs.indexOf(song);
+                        loadMusic(song);
+                        playMusic();
+                    });
+                });
+            }
+
+        </script>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -116,4 +154,53 @@
     window.addEventListener('resize', checkScreenWidth);
 </script>
 
+
+<!-- Popup -->
+<div id="changes-popup" class="popup">
+    <div class="popup-content">
+        <h2>Changes List</h2>
+        <ul>
+            <li>- Added search bar for songs and styles</li>
+            <li>- Added 10 new songs</li>
+        </ul>
+        <button id="close-popup-btn">Awesome</button>
+    </div>
+</div>
+<script>
+        // Function to set a cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Function to get a cookie
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const cookies = document.cookie.split(';');
+        for(let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i].trim();
+            if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+        }
+        return null;
+    }
+
+    // Show the popup if the cookie is not set
+    function showPopup() {
+        if (!getCookie("popup1")) {
+            document.getElementById('changes-popup').classList.add('show');
+        }
+    }
+
+    // Event listener to close the popup and set the cookie
+    document.getElementById('close-popup-btn').addEventListener('click', () => {
+        document.getElementById('changes-popup').classList.remove('show');
+        setCookie("popup1", 1, 30); // Set cookie to expire in 30 days
+    });
+
+    // Check for popup when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', showPopup);
+
+</script>
 </html>
