@@ -72,7 +72,67 @@ const songs = [
         displayName: 'By Your Side',
         cover: 'assets/10.jpg',
         style: 'plaintive soulful acoustic',
-    }
+    },
+    {
+        path: 'assets/11.mp3',
+        displayName: 'Voices in the Bazaar',
+        cover: 'assets/11.jpg',
+        style: 'Raga jazz fusion, Indian scales, improvisation',
+    },
+    {
+        path: 'assets/12.mp3',
+        displayName: 'Canção da Coragem',
+        cover: 'assets/12.jpg',
+        style: '16-bit, Retro Video Game OST, Chiptune',
+    },
+    {
+        path: 'assets/13.mp3',
+        displayName: 'Stitches in Time',
+        cover: 'assets/13.jpg',
+        style: 'alternative r&b griot',
+    },
+    {
+        path: 'assets/14.mp3',
+        displayName: 'Island Time Waltz',
+        cover: 'assets/14.jpg',
+        style: 'piano caribbean Caribbean rhythms, piano, syncopation, polyrhythms',
+    },
+    {
+        path: 'assets/15.mp3',
+        displayName: 'Dancefloor of Love',
+        cover: 'assets/15.jpg',
+        style: 'edm disco',
+    },
+    {
+        path: 'assets/16.mp3',
+        displayName: 'معركة الملحمي ',
+        cover: 'assets/16.jpg',
+        style: '16-bit',
+    },
+    {
+        path: 'assets/17.mp3',
+        displayName: "Euphoria's Release",
+        cover: 'assets/17.jpg',
+        style: 'new wave acid trance Acid synth, fast tempo, psychedelic vibe6-bit',
+    },
+    {
+        path: 'assets/18.mp3',
+        displayName: '미답의 사랑 노래',
+        cover: 'assets/18.jpg',
+        style: 'Americana, folk elements, nostalgic, rustic',
+    },
+    {
+        path: 'assets/19.mp3',
+        displayName: 'Bayou Nights',
+        cover: 'assets/19.jpg',
+        style: 'edm swamp blues EDM beats, swamp blues, deep bass, raw vocals',
+    },
+    {
+        path: 'assets/20.mp3',
+        displayName: 'Roots of My Soul',
+        cover: 'assets/20.jpg',
+        style: 'afro house acoustic blues',
+    },
 ];
 
 let musicIndex = Math.floor(Math.random() * songs.length);
@@ -212,3 +272,13 @@ function displaySongsList() {
         });
     });
 }
+
+
+
+
+
+
+
+
+
+
