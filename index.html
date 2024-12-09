@@ -224,7 +224,7 @@
 
     // Show the popup if the cookie is not set
     function showPopup() {
-        if (!getCookie("popup1")) {
+        if (!getCookie("v3.1")) {
             document.getElementById('changes-popup').classList.add('show');
         }
     }
@@ -232,7 +232,7 @@
     // Event listener to close the popup and set the cookie
     document.getElementById('close-popup-btn').addEventListener('click', () => {
         document.getElementById('changes-popup').classList.remove('show');
-        setCookie("popup1", 1, 30); // Set cookie to expire in 30 days
+        setCookie("v3.1", 1, 30); // Set cookie to expire in 30 days
     });
 
     // Check for popup when the DOM is loaded
