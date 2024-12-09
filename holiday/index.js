@@ -19,6 +19,42 @@ const songs = [
         cover: 'assets/Holiday Sparkle.jpg',
         style: 'upbeat, pop, festive',
     },
+    {
+        path: 'assets/Snowflakes and Firelight.mp3',
+        displayName: 'Snowflakes and Firelight',
+        cover: 'assets/Snowflakes and Firelight.jpg',
+        style: 'upbeat, festive, pop',
+    },
+    {
+        path: 'assets/Jingly Nights.mp3',
+        displayName: 'Jingly Nights',
+        cover: 'assets/Jingly Nights.jpg',
+        style: 'pop',
+    },
+    {
+        path: 'assets/Christmas Wonderland.mp3',
+        displayName: 'Christmas Wonderland',
+        cover: 'assets/Christmas Wonderland.jpg',
+        style: 'christmas',
+    },
+    {
+        path: 'assets/Christmas Time.mp3',
+        displayName: 'Christmas Time',
+        cover: 'assets/Christmas Time.jpg',
+        style: 'christmas',
+    },
+    {
+        path: 'assets/Merry Christmas.mp3',
+        displayName: 'Merry Christmas',
+        cover: 'assets/Merry Christmas.jpg',
+        style: 'Christmas, cheery, bells, chimes, choir, horns, organ, operatic vocals, orchestral',
+    },
+    {
+        path: 'assets/Christmas Calling.mp3',
+        displayName: 'Christmas Calling',
+        cover: 'assets/Christmas Calling.jpg',
+        style: "Boys' Choir, Symphony, Orchestral, Christmas",
+    },
 ];
 
 let musicIndex = Math.floor(Math.random() * songs.length);
@@ -55,7 +91,7 @@ function loadMusic(song) {
     title.textContent = song.displayName;
     style.textContent = song.style;
     image.src = song.cover;
-    //background.src = song.cover;
+    background.src = song.cover;
 }
 
 function changeMusic(direction) {
