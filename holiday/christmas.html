@@ -5,7 +5,7 @@
 
     
     <!-- SEO Meta Tags -->
-    <title>FAMdat - Free AI-Generated Music</title>
+    <title>FAMdat - Christmas Songs</title>
     <meta name="description" content="FAMdat offers free AI-generated music across multiple genres. Discover, play, and save unique songs created by AI, tailored to your taste.">
     <meta name="keywords" content="FAMdat, AI music, free music, AI-generated music, music player, save songs, search songs, electronic, pop, edm, soulful, AI generated">
     <meta name="author" content="FAMdat Team">
@@ -131,6 +131,10 @@
     <footer>
             <div class="footer">
                 <div class="footer-controls">
+                    <div class="footer-theme">
+                        <span><a href="#"></a><i class="fa-solid-footer fas fa-adjust" title="Togle Between Light Mode And Dark Mode"></i></a>
+                        <p><b>Lighting Mode</b></p></span>
+                    </div>
                     <div class="footer-saved">
                         <span><a href="../saved-songs.html"><i class="fa-solid-footer fas fa-folder" title="Saved Music"></i></a>
                         <p><b>Saved</b></p></span>
@@ -145,7 +149,7 @@
                         <p><b>Random</b></p></span>
                     </div>
                     <div class="footer-all">
-                        <span><a href="./database/index.html"><i class="fa-solid-footer fas fa-list-ul" title="All Music"></i></a>
+                        <span><a href="../database.html"><i class="fa-solid-footer fas fa-list-ul" title="All Music"></i></a>
                         <p><b>Music</b></p></span>
                     </div>
                     <div class="footer-home">
@@ -157,7 +161,7 @@
       </footer>
 
     
-    <script>
+    <!--<script>
         (function() {
       var devtoolsOpen = false;
       var threshold = 160;
@@ -176,7 +180,7 @@
         }
       }, 500);
     })();
-    </script>
+    </script>-->
 </body>
 <script src="index.js"></script>
 <script>
@@ -196,17 +200,18 @@
     <div class="popup-content">
         <h2>Update Log</h2>
         <ul>
-            <li>- Version 3.1:</li>
-            <li>- Added search bar for songs and styles</li>
-            <li>- Added 10 new songs</li>
+            <li>- Version 3.2:</li>
             <li>- Added a <a href="./christmas.html">Christmas</a> page</li>
-            <li>- Added 6 Christmas songs</li>
+            <li>- Added 7 Christmas songs</li>
+            <li>- Added a button to togle light and dark mode</li>
+            <li>- Added a <a href="../database.html">Database</a> page</li>
+            <li>- On version 3.3 FAMdat Mobile will be getting a redesign</li>
+            <li><b>By pressing continuing you agknowledge that this site uses cookies :)</b></li>
         </ul>
         <button id="close-popup-btn">Awesome</button>
     </div>
 </div>
 <script>
-        // Function to set a cookie
     function setCookie(name, value, days) {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -214,7 +219,6 @@
         document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
 
-    // Function to get a cookie
     function getCookie(name) {
         const nameEQ = name + "=";
         const cookies = document.cookie.split(';');
@@ -225,20 +229,17 @@
         return null;
     }
 
-    // Show the popup if the cookie is not set
     function showPopup() {
-        if (!getCookie("v3.1")) {
+        if (!getCookie("v3.2")) {
             document.getElementById('changes-popup').classList.add('show');
         }
     }
 
-    // Event listener to close the popup and set the cookie
     document.getElementById('close-popup-btn').addEventListener('click', () => {
         document.getElementById('changes-popup').classList.remove('show');
-        setCookie("v3.1", 1, 30); // Set cookie to expire in 30 days
+        setCookie("v3.2", 1, 30); 
     });
 
-    // Check for popup when the DOM is loaded
     document.addEventListener('DOMContentLoaded', showPopup);
 
 </script>
@@ -284,18 +285,40 @@
       snowflake.classList.add('snowflake');
       snowflake.textContent = '❄'; // Snowflake character
       snowflake.style.left = Math.random() * 100 + 'vw';
-      snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Between 2-5 seconds
-      snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // Between 10px and 20px
+      snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; 
+      snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; 
   
       snowContainer.appendChild(snowflake);
   
-      // Remove snowflake after animation
       setTimeout(() => {
         snowflake.remove();
       }, 5000);
     }
   
-    setInterval(createSnowflake, 200); // Create a snowflake every 200ms
+    setInterval(createSnowflake, 200); 
 </script>
-  
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.querySelector(".footer-theme");
+        const stylesheet = document.querySelector('link[rel="stylesheet"][href^="../style"]');
+
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = stylesheet.getAttribute("href");
+
+            if (currentTheme.includes("style.css")) {
+                stylesheet.setAttribute("href", "../style-dark.css");
+            } else {
+                stylesheet.setAttribute("href", "../style.css");
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
 </html>
