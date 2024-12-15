@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FAMdat - Download Songs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/ComputerWiz541/FAMdat/main/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background: url('background.svg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+
+        .song-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .song-info {
+            flex-grow: 1;
+            padding-left: 15px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container-wrapper">
+        <div class="container2">
+            <h1 style="text-align:center; margin:20px 0;">Download Songs</h1>
+            <input type="text" id="search-bar" placeholder="Search for a song or style..." />
+            <div class="songs-list" id="songs-list">
+                <!-- Songs will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-controls">
+                <div class="footer-theme">
+                    <span><a href="#"><i class="fa-solid-footer fas fa-adjust" title="Toggle Theme"></i></a>
+                    <p><b>Lighting Mode</b></p></span>
+                </div>
+                <div class="footer-saved">
+                    <span><a href="./saved-songs.html"><i class="fa-solid-footer fas fa-folder" title="Saved Music"></i></a>
+                    <p><b>Saved</b></p></span>
+                </div>
+                <!--
+                <div class="footer-random">
+                    <span><a href="index.html"><i class="fa-solid-footer fas fa-random" title="Random"></i></a>
+                    <p><b>Random</b></p></span>
+                </div>
+                -->
+                <div class="footer-all">
+                    <span><a href="./index.html"><i class="fa-solid-footer fas fa-home" title="All Music"></i></a>
+                    <p><b>Home</b></p></span>
+                </div>
+                <div class="footer-christmas">
+                    <span><a href="./holiday/christmas.html"><i class="fa-solid-footer fas fa-sleigh" title="Christmas"></i></a>
+                    <p><b>Christmas</b></p></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const songs = [
+            {
+                path: 'assets/1.mp3',
+                displayName: 'Neon Goodbye',
+                cover: 'assets/1.jpg',
+                style: 'dancepop electronic futuristic',
+            },
+            {
+                path: 'assets/2.mp3',
+                displayName: 'Times 2',
+                cover: 'assets/2.jpg',
+                style: 'country',
+            },
+            {
+                path: 'assets/3.mp3',
+                displayName: 'Echoes of Goodbye',
+                cover: 'assets/3.jpg',
+                style: 'pop rhythmic melancholic',
+            },
+            {
+                path: 'assets/4.mp3',
+                displayName: 'Dancing in the Light',
+                cover: 'assets/4.jpg',
+                style: 'gospel anthemic uplifting',
+            },
+            {
+                path: 'assets/5.mp3',
+                displayName: 'The Melodic Blaze',
+                cover: 'assets/5.jpg',
+                style: 'opera mellow orchestral',
+            },
+            {
+                path: 'assets/6.mp3',
+                displayName: 'Dance Till Dawn',
+                cover: 'assets/6.jpg',
+                style: 'electronic edm',
+            },
+            {
+                path: 'assets/7.mp3',
+                displayName: 'Trapped in the Factory',
+                cover: 'assets/7.jpg',
+                style: 'anthemic j-pop',
+            },
+            {
+                path: 'assets/8.mp3',
+                displayName: 'Digital Heartache',
+                cover: 'assets/8.jpg',
+                style: 'futuristic traditional electronic',
+            },
+            {
+                path: 'assets/9.mp3',
+                displayName: 'Burning Strings',
+                cover: 'assets/9.jpg',
+                style: 'groovy soulful reggae',
+            },
+            {
+                path: 'assets/10.mp3',
+                displayName: 'By Your Side',
+                cover: 'assets/10.jpg',
+                style: 'plaintive soulful acoustic',
+            },
+            {
+                path: 'assets/11.mp3',
+                displayName: 'Voices in the Bazaar',
+                cover: 'assets/11.jpg',
+                style: 'Raga jazz fusion, Indian scales, improvisation',
+            },
+            {
+                path: 'assets/12.mp3',
+                displayName: 'Canção da Coragem',
+                cover: 'assets/12.jpg',
+                style: '16-bit, Retro Video Game OST, Chiptune',
+            },
+            {
+                path: 'assets/13.mp3',
+                displayName: 'Stitches in Time',
+                cover: 'assets/13.jpg',
+                style: 'alternative r&b griot',
+            },
+            {
+                path: 'assets/14.mp3',
+                displayName: 'Island Time Waltz',
+                cover: 'assets/14.jpg',
+                style: 'piano caribbean Caribbean rhythms, piano, syncopation, polyrhythms',
+            },
+            {
+                path: 'assets/15.mp3',
+                displayName: 'Dancefloor of Love',
+                cover: 'assets/15.jpg',
+                style: 'edm disco',
+            },
+            {
+                path: 'assets/16.mp3',
+                displayName: 'معركة الملحمي ',
+                cover: 'assets/16.jpg',
+                style: '16-bit',
+            },
+            {
+                path: 'assets/17.mp3',
+                displayName: "Euphoria's Release",
+                cover: 'assets/17.jpg',
+                style: 'new wave acid trance Acid synth, fast tempo, psychedelic vibe6-bit',
+            },
+            {
+                path: 'assets/18.mp3',
+                displayName: '미답의 사랑 노래',
+                cover: 'assets/18.jpg',
+                style: 'Americana, folk elements, nostalgic, rustic',
+            },
+            {
+                path: 'assets/19.mp3',
+                displayName: 'Bayou Nights',
+                cover: 'assets/19.jpg',
+                style: 'edm swamp blues EDM beats, swamp blues, deep bass, raw vocals',
+            },
+            {
+                path: 'assets/20.mp3',
+                displayName: 'Roots of My Soul',
+                cover: 'assets/20.jpg',
+                style: 'afro house acoustic blues',
+            },
+                // Add more song objects as needed
+            ];
+
+            const songsList = document.getElementById('songs-list');
+            const searchBar = document.getElementById('search-bar');
+
+            function displayFilteredSongs(filteredSongs) {
+                songsList.innerHTML = '';
+                filteredSongs.forEach(song => {
+                    const songElement = document.createElement('div');
+                    songElement.classList.add('song-list');
+                    songElement.innerHTML = `
+                        <img src="${song.cover}" alt="${song.displayName}" class="song-cover" style="width:50px;height:50px;border-radius:5px;">
+                        <div class="song-info">
+                            <h2>${song.displayName}</h2>
+                            <p>${song.style}</p>
+                        </div>
+                        <a href="${song.path}" download class="fa-solid fa-download" title="Download"></a>
+                    `;
+                    songsList.appendChild(songElement);
+                });
+            }
+
+            searchBar.addEventListener('input', function () {
+                const searchValue = searchBar.value.toLowerCase();
+                const filteredSongs = songs.filter(song => 
+                    song.displayName.toLowerCase().includes(searchValue) ||
+                    song.style.toLowerCase().includes(searchValue)
+                );
+                displayFilteredSongs(filteredSongs);
+            });
+
+            displayFilteredSongs(songs);
+        });
+    </script>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.querySelector(".footer-theme");
+        const stylesheet = document.querySelector('link[rel="stylesheet"][href="style.css"], link[rel="stylesheet"][href="style-dark.css"]');
+
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = stylesheet.getAttribute("href");
+            if (currentTheme === "style.css") {
+                stylesheet.setAttribute("href", "style-dark.css");
+            } else {
+                stylesheet.setAttribute("href", "style.css");
+            }
+        });
+    });
+</script>
+
+
+
+
+</html>
