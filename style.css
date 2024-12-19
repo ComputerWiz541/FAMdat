@@ -345,7 +345,7 @@ footer {
         left: 0;
         top: 0;
         bottom: 0;
-        padding-top: 200px;
+        padding-top: 100px;
         background-color: #e7e7e7;
     }
 
@@ -676,4 +676,54 @@ footer {
 
 #close-popup-btn:hover {
     background-color: #212121;
+}
+
+
+
+
+
+
+
+.bottom-right-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: rgba(231, 231, 231, 0.4); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+    color: #333; 
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    z-index: 10; 
+}
+
+.bottom-right-box:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.bottom-right-content {
+    position: relative; 
+    z-index: 1; 
+}
+
+.bottom-right-content p {
+    margin: 5px 0; 
+    font-size: 13px; 
+}
+
+.bottom-right-content a {
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
+}
+
+.bottom-right-content a:hover {
+    color: #0056b3; 
 }
