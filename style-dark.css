@@ -350,7 +350,7 @@ footer {
         left: 0;
         top: 0;
         bottom: 0;
-        padding-top: 200px;
+        padding-top: 100px;
         background-color: #291b49;
         color: #ccc;
     }
@@ -371,7 +371,7 @@ footer {
 
 .footer span {
     font-size: 12px;
-    color: #e0e0e0;
+    color: #F0E6FF;
 }
 
 
@@ -391,7 +391,7 @@ footer {
     display: flex;
     justify-content: center; 
     gap: 50px; 
-    color: #ccc;
+    color: #F0E6FF;
 }
 
 
@@ -867,3 +867,55 @@ h2, h3 {
     box-shadow: 0 5px 15px rgba(144, 102, 199, 0.5);
     outline: none;
 }
+
+
+
+
+.bottom-right-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: rgba(127, 17, 224, 0.4); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+    color: #F0E6FF; 
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    z-index: 10; 
+}
+
+.bottom-right-box:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.bottom-right-content {
+    position: relative; 
+    z-index: 1; 
+}
+
+.bottom-right-content p {
+    margin: 5px 0; 
+    font-size: 13px; 
+}
+
+.bottom-right-content a {
+    color: #F0E6FF; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
+}
+
+.bottom-right-content a:hover {
+    color: #F0E6FF; 
+}
+
+.bottom-right-content a:visited {
+    color: #F0E6FF;
+}
+
