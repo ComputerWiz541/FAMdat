@@ -240,9 +240,6 @@ saveBtn.addEventListener('click', () => {
 const savedAd = document.getElementById('saved-ad');
 const closeAd2Btn = document.getElementById('close-ad2');
 
-closeAd2Btn.addEventListener('click', () => {
-    savedAd.style.display = 'none';
-});
 
 
 
@@ -279,6 +276,16 @@ function displaySongsList() {
 
 
 
-
+window.onload = function() {
+            var loadingScreen = document.getElementById('loading-screen');
+            
+            setTimeout(function() {
+                loadingScreen.style.opacity = '0';
+                
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 3000);
+        };
 
 
