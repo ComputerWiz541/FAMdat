@@ -95,7 +95,7 @@ const songs = [
         path: 'assets/14.mp3',
         displayName: 'Island Time Waltz',
         cover: 'assets/14.jpg',
-        style: 'piano caribbean Caribbean rhythms, piano, syncopation, polyrhythms',
+        style: 'piano caribbean Caribbean rhythms, piano',
     },
     {
         path: 'assets/15.mp3',
@@ -113,7 +113,7 @@ const songs = [
         path: 'assets/17.mp3',
         displayName: "Euphoria's Release",
         cover: 'assets/17.jpg',
-        style: 'new wave acid trance Acid synth, fast tempo, psychedelic vibe6-bit',
+        style: 'new wave acid trance Acid synth, fast tempo',
     },
     {
         path: 'assets/18.mp3',
@@ -125,7 +125,7 @@ const songs = [
         path: 'assets/19.mp3',
         displayName: 'Bayou Nights',
         cover: 'assets/19.jpg',
-        style: 'edm swamp blues EDM beats, swamp blues, deep bass, raw vocals',
+        style: 'edm swamp blues EDM beats, swamp blues',
     },
     {
         path: 'assets/20.mp3',
