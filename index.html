@@ -149,10 +149,6 @@
                         <span><a href="./database.html"><i class="fa-solid-footer fas fa-list-ul" title="All Music"></i></a>
                         <p><b>Music</b></p></span>
                     </div>
-                    <div class="footer-christmas">
-                        <span><a href="./holiday/christmas.html"><i class="fa-solid-footer fas fa-sleigh" title="Christmas"></i></a>
-                        <p><b>Christmas</b></p></span>
-                    </div>
                 </div>
             </div>
       </footer>
@@ -221,13 +217,14 @@
     <div class="popup-content">
         <h2>Update Log</h2>
         <ul>
-            <li>- Version 3.2.2:</li>
-            <li>- ❌ the 🎄🎅 page, 😭</li>
+            <li>- Version 3.3:</li>
+            <li>- FAMdat Mobile has been revamped!</li>
+            <li>- Mobile Updates: Fixed many bugs, added a music menu, added swipe gestures.</li>
+            <li>- 🗑️️ed the 🎄🎅 page, 😭</li>
             <li>- Added a button to togle light and dark mode</li>
             <li>- Added a <a href="./database.html">Database</a> page</li>
             <li>- Moved the side controls up</li>
             <li>- Added a little info box at the bottom right</li>
-            <li>- On version 3.3 FAMdat Mobile will be getting a redesign</li>
             <li><b>By pressing continuing you agknowledge that this site uses cookies :)</b></li>
         </ul>
         <button id="close-popup-btn">Awesome</button>
@@ -252,14 +249,14 @@
     }
 
     function showPopup() {
-        if (!getCookie("v3.2.2")) {
+        if (!getCookie("v3.3")) {
             document.getElementById('changes-popup').classList.add('show');
         }
     }
 
     document.getElementById('close-popup-btn').addEventListener('click', () => {
         document.getElementById('changes-popup').classList.remove('show');
-        setCookie("v3.2.2", 1, 30); 
+        setCookie("v3.3", 1, 30); 
     });
 
     document.addEventListener('DOMContentLoaded', showPopup);
