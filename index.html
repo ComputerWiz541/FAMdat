@@ -183,6 +183,25 @@
       }, 500);
     })();
     </script>-->
+    
+    
+    
+    
+    
+    <div class="loading-screen" id="loading-screen">
+        <div class="music-wave">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+        </div>
+        <div class="loading-text">
+            <h1>FAMdat</h1>
+            <p>Fetching your music...</p>
+        </div>
+    </div>
+    
 </body>
 <script src="index.js"></script>
 <script>
@@ -202,9 +221,8 @@
     <div class="popup-content">
         <h2>Update Log</h2>
         <ul>
-            <li>- Version 3.2.1:</li>
-            <li>- Added a <a href="./holiday/christmas.html">Christmas</a> page</li>
-            <li>- Added 7 Christmas songs</li>
+            <li>- Version 3.2.2:</li>
+            <li>- ❌ the 🎄🎅 page, 😭</li>
             <li>- Added a button to togle light and dark mode</li>
             <li>- Added a <a href="./database.html">Database</a> page</li>
             <li>- Moved the side controls up</li>
@@ -234,14 +252,14 @@
     }
 
     function showPopup() {
-        if (!getCookie("v3.2")) {
+        if (!getCookie("v3.2.2")) {
             document.getElementById('changes-popup').classList.add('show');
         }
     }
 
     document.getElementById('close-popup-btn').addEventListener('click', () => {
         document.getElementById('changes-popup').classList.remove('show');
-        setCookie("v3.2", 1, 30); 
+        setCookie("v3.2.2", 1, 30); 
     });
 
     document.addEventListener('DOMContentLoaded', showPopup);
@@ -263,7 +281,6 @@
         });
     });
 </script>
-
 
 
 
